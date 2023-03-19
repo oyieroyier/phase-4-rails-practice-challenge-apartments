@@ -1,4 +1,5 @@
 class Tenant < ApplicationRecord
+  validates :name, presence: true
   validates :age,
             exclusion: {
               in: (0..17).to_a,
